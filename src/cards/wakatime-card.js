@@ -20,7 +20,7 @@ import { wakatimeCardLocales } from "../translations.js";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const languageColors = require("../common/languageColors.json"); // now works
-// const filteredLanguages = wakatimeData.data.languages.filter(lang => lang.hours >= 70);
+
 /**
  * Creates the no coding activity SVG node.
  *
@@ -220,7 +220,7 @@ const getStyles = ({
  */
 const renderWakatimeCard = (stats = {}, options = { hide: [] }) => {
   let { languages = [] } = stats;
-  languages = languages.filter(lang => lang.hours >= 70);
+  languages = languages.filter(lang => lang.hours >= 50);
   const {
     hide_title = false,
     hide_border = false,
