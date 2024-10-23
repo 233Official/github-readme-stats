@@ -20,7 +20,7 @@ import { wakatimeCardLocales } from "../translations.js";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
 const languageColors = require("../common/languageColors.json"); // now works
-
+const filteredLanguages = wakatimeData.data.languages.filter(lang => lang.hours >= 70);
 /**
  * Creates the no coding activity SVG node.
  *
