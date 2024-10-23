@@ -220,6 +220,7 @@ const getStyles = ({
  */
 const renderWakatimeCard = (stats = {}, options = { hide: [] }) => {
   let { languages = [] } = stats;
+  languages = languages.filter(lang => lang.hours >= 70);
   const {
     hide_title = false,
     hide_border = false,
